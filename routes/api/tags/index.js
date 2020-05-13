@@ -4,8 +4,6 @@ const router = express.Router();
  
 const c = require('./tags.controller')
 
-// router.get('/', c.findAll)
-
 router.get('/', auth, c.findAll)
 router.get('/:id', auth, c.findById)
 router.post('/', auth,  c.insert)

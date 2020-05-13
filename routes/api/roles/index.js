@@ -4,13 +4,6 @@ const router = express.Router();
 const c = require('./roles.controller')
 
 const { auth } = require('../../../secret');
- 
-// router.get('/', c.findAll)
-// router.get('/:id', c.findById)
-// router.post('/',  c.insert)
-// router.put('/:id', c.updateById)
-// router.delete('/:id', c.removeById)
-// router.delete('/', c.remove)
 
 router.get('/', auth, c.findAll)
 router.get('/:id', auth, c.findById)
